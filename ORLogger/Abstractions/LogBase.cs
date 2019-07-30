@@ -1,0 +1,22 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ORLogger.Abstractions
+{    
+    /// <summary>
+     ///     <english>
+     ///         This abstraction helps handling the different type of Loggers in a common interface.
+     ///     </english>
+     ///     <turkish>
+     ///         Bu soyut sınıf farklı tipteki Loglama kaynaklarını ortak bir arayüz üzerinden yönetmemizi sağlar. Liskov yerine geçme kuralı ile işlerimizi kolaylaştırır.
+     ///     </turkish>
+     /// </summary>
+    public abstract class LogBase
+    {
+        protected readonly object lockObj = new object();
+        public abstract void Log (string message, bool isError);
+    }
+}
