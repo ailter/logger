@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,9 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EventViewerLogger.cs" />
-    <Compile Include="FileLogger.cs" />
-    <Compile Include="ILogger.cs" />
+    <Compile Include="Abstractions\LogBase.cs" />
+    <Compile Include="Concretes\Helpers\ExceptionHelper.cs" />
+    <Compile Include="Concretes\Helpers\FileHelper.cs" />
+    <Compile Include="Concretes\Helpers\LogHelper.cs" />
+    <Compile Include="Concretes\Logger\DBLogger.cs" />
+    <Compile Include="Concretes\Logger\EventLogger.cs" />
+    <Compile Include="Concretes\Logger\FileLogger.cs" />
+    <Compile Include="Concretes\Logger\LogTarget.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -53,3 +53,4 @@ namespace ORLogger.Concretes.Helpers
             return sb.ToString();
         }
     }
+}
